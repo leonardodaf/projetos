@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-image: url(imagens/bg.jpg);
+    background-size: cover;
+    width: 100vw;
+}
+
+/*MENU*/
+header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 3%;
+}
+
+header img{
+    width: 10%;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+nav ul li a:hover{
+    text-decoration: underline 2px #00AAE1;
+}
+
+nav img{
+    width: 30%;
+    filter: invert(1);
+}
+/*FIM MENU*/
+
+main{
+    max-width: 70%;
+}
+
+.logo-tb{
+    margin-left: 1%;
+}
+
+.logo-tb img{
+    width: 40%;
+    padding: 40px;
+}
+
+/*TEMPORADA*/
+.btn-temp{
+    margin-left: 5%;
+}
+
+.btn-temp button{
+    background-color: #455c87;
+    color: #fff;
+    padding: 15px 25px;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-temp button:hover{
+    transform: scale(0.95);
+}
+/*FIM TEMPORADA*/
+
+/*DESCRIÇÃO DA SÉRIE*/
+.descricao{
+    max-width: 50%;
+    margin-left: 6%;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.descricao p{
+    color: #fff;
+    font-size: 14px;
+}
+/*FIM DESCRIÇÃO DA SÉRIE*/
+
+/*BOTÃO DE ASSISTIR PRÓXIMO EP*/
+.prox-ep{
+    margin-left: 6%;
+    margin-top: 20px;
+}
+
+.btn-ep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00AAE1;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 40px;
+    text-align: left;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-ep:hover{
+    transform: scale(0.95);
+}
+
+.btn-ep i{
+    font-size: 48px;
+    margin-right: 10px;
+}
+/*FIM BOTÃO DE ASSISTIR PRÓXIMO EP*/
+
+/*EPISÓDIOS*/
+.episodios{
+    margin-left: 15%;
+    display: flex;
+}
+
+.episodios img{
+    width: 15%;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.episodios img:hover{
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+/*FIM EPISÓDIOS*/

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #252525;
+}
+
+/* CABEÇALHO */
+header{
+    width: 100%;
+}
+
+.foto-perfil{
+    /* background-color: rgb(201, 197, 197); */
+    background-image: url(imagens/user.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 50px auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.nome-perfil{
+    text-align: center;
+    font-size: 24px;
+    color: #c6c5c5;
+}
+
+.descricao{
+    text-align: center;
+    padding: 5px 15px;
+    color: #fff;
+}
+/* FIM CABEÇALHO */
+
+
+.redes-sociais{
+    margin: auto;
+    max-width: 450px;
+    
+}
+
+.botao{
+    background: linear-gradient(to right, #a30b0b 40%,#FD4800);
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+}
+
+.botao p{
+    font-size: 18px;
+    margin-left: 5%;
+}
+
+.botao i{
+    float: right;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+.btn-redes{
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    background-color: #d51111;
+    color: #fff;
+    margin: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-redes:hover{
+    transform: scale(1.1);
+}
+
+.sociais{
+    text-align: center;
+}
+
+.btn-redes i{
+    position: absolute;
+    top: 33%;
+    left: 33%;
+}
