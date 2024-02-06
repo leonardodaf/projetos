@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES DO BACKGROUND */
+
+.bg-video{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+}
+
+.bg-video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-video::after{
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+/* MENU */
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 4%;
+}
+
+.btn-abrir{
+    display: none;
+}
+
+.logo img{
+    width: 50%;
+}
+
+.menu{
+    width: 100%;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.menu a:hover{
+    transform: scale(1.2);
+    text-decoration: underline 3px red;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.sociais{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    gap: 30px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+/* FIM DO MENU */
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.secao1, .secao2{
+    width: 50%;
+    height: 100%;
+}
+
+.secao1{
+    margin-top: 120px;
+}
+
+.secao1 img{
+    width: 40%;
+    margin: 30px 0px;
+}
+
+.secao1 p{
+    font-size: 18px;
+    font-weight: 700;
+    text-align: justify;
+    color: white;
+    width: 75%;
+}
+
+.secao1 button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.secao1 button:hover{
+    transform: scale(0.95);
+}
+
+.secao2{
+    position: relative;
+    height: 100%;
+}
+
+.secao2 img{
+    width: 70%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+/* RESPONSIVO CELULAR*/
+@media screen and (max-width:992px){
+
+    /* MENU MOBILE */
+    .sociais{
+        display: none;
+    }
+
+    .sociais-mobile{
+        display: flex;
+        float: right;
+        gap: 10px;
+        padding: 20px 10%;
+    }
+
+    .btn-sociais{
+        background-color: white;
+        color: red;
+        transition: .3s;
+    }
+
+    .btn-sociais:hover{
+        transform: scale(1.2);
+    }
+
+    .logo{
+        width: 25%;
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .btn-abrir{
+        display: block;
+        width: 75%;
+        text-align: right;
+        color: white;
+        font-size: 60px;
+    }
+
+    .menu-mobile.abrir-menu{
+        width: 65%;
+    }
+
+    .menu-mobile .btn-fechar{
+        margin-top: 20px;
+    }
+
+    .menu-mobile.abrir-menu ~ .overlay-menu{
+        display: block;
+    }
+
+    .overlay-menu{
+        background-color: #00000096;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 888;
+        display: none;
+    }
+
+    .menu-mobile{
+        display: block;
+        background-color: red;
+        height: 100vh;
+        width: 0%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 999;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .menu-mobile .btn-fechar i{
+        color: white;
+        font-size: 32px;
+        font-weight: 800;
+        padding: 0px 5%;
+    }
+
+    .menu-mobile ul{
+        list-style-type: none;
+        margin-top: 60px;
+    }
+
+    .menu-mobile ul a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        text-align: right;
+    }
+    .menu-mobile ul a:hover{
+        color: red;
+    }
+
+    .menu-mobile ul li{
+        padding: 20px 10%;
+        transition: .3s;
+    }
+
+    .menu-mobile ul li:hover{
+        background-color: white;
+        transform: scale(1.05);
+    }
+    /* FIM MENU MOBILE */
+
+    .flex{
+        display: block;
+    }
+
+    .secao1, .secao2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .secao1 img{
+        width: 45%;
+        margin: 15px 0;
+    }
+
+    .secao1 p{
+        width: 100%;
+        padding: 15px 3%;
+        font-size: 14px;
+    }
+
+    .secao2 img{
+        top: 170px;
+        left: 15%;
+    }
+}
+
+/* RESPONSIVO TABLET */
+@media screen and (min-width: 768px) and (max-width:992px){
+
+    .logo img{
+        width: 75%;
+    }
+    
+    .secao1 p{
+        font-size: 20px;
+    }
+
+    .secao1 button{
+        padding: 15px 35px;
+        font-size: 18px;
+    }
+    
+    .secao2 img{
+        width: 60%;
+        top:275px;
+        left: 20%;
+    }
+}
